@@ -7,6 +7,3 @@ This pipeline is used for the contstruction of the MaNGA object catalog (MaNGAOb
 - Build models for the extracted spectra
 - Classify the extracted spectra
 - Build a summary catalog
-
-## Identifying Photometric Objects
-
