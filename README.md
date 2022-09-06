@@ -7,3 +7,6 @@ This pipeline is used for the contstruction of the MaNGA object catalog (MaNGAOb
 - Build models for the extracted spectra
 - Classify the extracted spectra
 - Build a summary catalog
+
+# Tables
+15.r1arc.fits and 15.r1kpc.fits contain positions, classifications, and derived parameters for all of our identified objects. The two file are identical except that the derived parameters in 15.r1arc.fits are calculated from a 1 arcsecond circular aperture while the derived parameters in 15.r1kpc.fits are calculated from a 1 kpc circular aperture (where the aperture size is calculated from the object's redshift). 
