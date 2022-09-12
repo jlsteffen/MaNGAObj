@@ -57,6 +57,7 @@ Both data tables have the following columns;
 The extracted emission lines are given below, the index refers to its position in the above tables.
 
 | Index | Linename | Wavelength (A) |
+| ----- | -------- | -------------- |
 | 0 | OII | 3730 |
 | 1 | NeIII | 3870 |
 | 2 | NeIII | 3969 |
@@ -79,17 +80,32 @@ The files can be accessed in Python using the package, [AstroPy](https://www.ast
 ```
 from astropy.io import fits
 
-table = fits.open('/path_to_file/MaNGAObj_aper2kpc_v1.fits')
-data = table[1].data
+mangaobj = fits.open('/path_to_file/MaNGA_SpecObj_v1.fits')
+obj = mangaobj[1].data
+
+mangaspfit = fits.open('/path_to_file/MaNGAObj_aper2kpc_v1.fits')
+dat = table[1].data
 
 # Right ascensions and declinations
-ra = data['RA']
-Dec = data['DEC']
+ra = obj['RA']
+Dec = obj['DEC']
+
+# ZCLASS and SCLASS
+zclass = obj['zclass']
+sclass = obj['sclass']
+
+# plateifus with BLAGN and zclass of z_corr
+ix = (zclass == 1)&(sclass == 2)
+plateifus = obj['plateifu'][ix]
 
 # H-alpha flux and error
-flux = data['flux']
+flux = dat['flux']
 
-halpha = flux[:,0,X]
-halpha_err = flux[:,1,X]
+halpha = flux[:,0,12]
+halpha_err = flux[:,1,12]
+
+# H-alpha flux of galaxies with zclass equal to z_corr
+iy = (zclass == 1)&(sclass == 1)
+halpha = flux[iy,0,12]
 ```
 
