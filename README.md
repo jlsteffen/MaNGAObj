@@ -1,4 +1,4 @@
-## MaNGAObj
+# MaNGAObj
 This pipeline is used for the contstruction of the MaNGA object catalog (MaNGAObj) used in [Fu et al. 2018](https://ui.adsabs.harvard.edu/abs/2018ApJ...856...93F/abstract), [Steffen et al. 2021](https://ui.adsabs.harvard.edu/abs/2021ApJ...909..120S/abstract), and Steffen et al. 2022a,b (in preparation). The pipeline has the following main steps;
 - Cross-match MaNGA fields with SDSS's photometric catalog (PhotObj)
 - Clean overdeblended sources from PhotObj
@@ -8,9 +8,9 @@ This pipeline is used for the contstruction of the MaNGA object catalog (MaNGAOb
 - Classify the extracted spectra
 - Build a summary catalog
 
-## Tables
+# Tables
 
-# MaNGA_SpecObj.fits
+## MaNGA_SpecObj.fits
 MaNGA_SpecObj.fits contains our visual classifications for the identified objects along with their positions and r-band mangnitudes from SDSS's photometric catalog. The table is organized into the following columns;
 
 | Column | Shape | Description |
@@ -31,7 +31,7 @@ MaNGA_SpecObj.fits contains our visual classifications for the identified object
 | ZCLASS | 15592, | Z classification (1=z_corr, 0=z_off, -1=unclass) |
 | SCLASS | 15592, | Spectral classification (1=galaxy, 2=BLAGN, 3=star, -1=lowSN, -2=defect) |
 
-# MaNGAObj_aperXXX
+## MaNGAObj_aper
 MaNGAObj_aper2arc_v1.fits and MaNGAObj_aper2kpc_v1.fits contain positions and derived parameters for all of our identified objects. The two files are identical except that the derived parameters in MaNGAObj_aper2arc_v1.fits are calculated from a 2 arcsecond diameter circular aperture while the derived parameters in MaNGAObj_aper2kpc_v1.fits are calculated from a 2 kpc diameter circular aperture (where the aperture size is calculated from the object's redshift). These tables have the same organization as MaNGA_SpecObj.fits. 
 
 Both data tables have the following columns;
@@ -78,6 +78,8 @@ The extracted emission lines are given below, the index refers to its position i
 | 14 | SII | 6718 |
 | 15 | SII | 6733 |
 | 16 | ArIII | 7138 |
+
+# Tutorial
 
 The files can be accessed in Python using the package, [AstroPy](https://www.astropy.org/). The table may be opened and columns may be called with the following example code block.
 ```
