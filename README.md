@@ -51,7 +51,7 @@ Both data tables have the following columns;
 | AON | 15592, 17 | Amplitude over noise for 17 emission lines (lines) |
 | SIGMA_OBS | 15592, 17 | noise calculated from residual spectrum (lines) |
 | EBMV | 15592, 2 | intrinsic reddening and err (value, error) |
-| KINSTAR | 15592, 2, 4 | stellar kinematics (Value, error), (velocity, velocity dispersion, ?, ?) |
+| KINSTAR | 15592, 2, 4 | stellar kinematics (Value, error), (velocity, velocity dispersion, H3, H4) |
 | WEIGHTS | 15592, 2, 78 | weights of SSP templates in units of 1e-30 (value, error), (weights) |
 | M_STAR | 15592, 2, 78 | stellar mass (value, error), (weights) |
 | CHI2PPXF | 15592, | Chi^2/DOF from PPXF |
