@@ -84,7 +84,7 @@ mangaobj = fits.open('/path_to_file/MaNGA_SpecObj_v1.fits')
 obj = mangaobj[1].data
 
 mangaspfit = fits.open('/path_to_file/MaNGAObj_aper2kpc_v1.fits')
-dat = table[1].data
+dat = mangaspfit[1].data
 
 # Right ascensions and declinations
 ra = obj['RA']
