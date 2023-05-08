@@ -1,0 +1,2 @@
+SPFIT is a spectral fitting code written by Dr. Hai Fu (Fu et al. 2018; https://github.com/fuhaiastro/spfit). SPFIT simultaneously fits stellar continuum and emission lines using the Penalized Pixel-Fitting method (pPXF; Cappellari & Emsellem 2004, Cappellari 2017) with simple stellar population models from MIUSCAT (Vazdekis et al. 2012). 
+
